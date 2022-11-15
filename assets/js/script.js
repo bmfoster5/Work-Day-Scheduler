@@ -41,8 +41,8 @@ $(document).ready($(function() {
         var workText = userInput.value.trim();
         if (workText === "") {
             return;
-    });
-
+    })
+};
     function colorChange() {
         $(timeBlock).each(function(){
           var timeSlot = parseInt($(this).attr('id').split('-')[1]);
@@ -90,4 +90,4 @@ function storeText() {
         }
 
     init();
-}));
+
