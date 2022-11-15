@@ -19,8 +19,22 @@ function currentDay() {
     var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
     timeDisplayEl.text(rightNow);
 }
+function renderInput() {
+    var h9 = $('#hour-9 .description').val(localStorage.getItem('hour-9'))
+    var h10 = $('#hour-10 .description').val(localStorage.getItem('hour-10'))
+    var h11 = $('#hour-11 .description').val(localStorage.getItem('hour-11'))
+    var h12 = $('#hour-12 .description').val(localStorage.getItem('hour-12'))
+    var h13 = $('#hour-13 .description').val(localStorage.getItem('hour-13'))
+    var h14 = $('#hour-14 .description').val(localStorage.getItem('hour-14'))
+    var h15 = $('#hour-15 .description').val(localStorage.getItem('hour-15'))
+    var h16 = $('#hour-16 .description').val(localStorage.getItem('hour-16'))
+    var h17 = $('#hour-17 .description').val(localStorage.getItem('hour-17'))
+    window.localStorage.getItem(h9, h10, h11, h12, h13, h14, h15, h16, h17)
+  }
 
-$(document).ready($(function () {
+$(document).ready($(function() {
+
+
 
     saveButton.on('click', function(event) {
         event.preventdefault();
@@ -68,28 +82,6 @@ $(document).ready($(function () {
         }
     };
 
-function colorChange() {
-$('.time-block').each(function(){
-    // assign var to each hour //use split
-    var timeSlot = 
-    if (storedTo !== null) {
-        workTodo = storedToDos;
-        // add if/else statement to have color code work
-
-    }
-    if (___ < currentHour) {
-        timeBlock.classList.add("past");
-        console.log("working")
-    }
-    if (___ == currentHour) {
-
-    } else {
-
-    }
-    
-}); 
-
-
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
     // attribute of each time-block be used to do this?
@@ -97,9 +89,5 @@ function storeText() {
             localStorage.setItem("workToDo", JSON.stringify(storedTodos));
         }
 
-
-
-
     init();
-
-});
+}));
