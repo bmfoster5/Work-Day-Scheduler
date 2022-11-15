@@ -18,4 +18,4 @@ Hello! I have created a Work Day Scheduler! Take a look and let me know what you
 
 ## How to Contribute
 
-Let me know what I could improve on!
+Let me know what I could improve on!!
